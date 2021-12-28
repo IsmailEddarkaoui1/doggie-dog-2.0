@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Layout from '../../components/layout'
+import {GatsbyImage, getImage} from "gatsby-plugin-image"
 import {graphql} from 'gatsby'
 
 
@@ -10,9 +11,16 @@ const DogPage = ({
         }
     }
 }) => {
+    const image = getImage(dog.images.picture1.localFile)
+
     return (
         <Layout pageTitle="Dogs Template">
             <div>
+                <GatsbyImage image={image}
+                    alt={
+                        dog.images.picture1.altText
+                    }/>
+
                 <p>Name: {
                     dog.name
                 }</p>
@@ -54,9 +62,19 @@ export const query = graphql `
             sterilized
             chieldFriendly
             description
+            images {
+                picture1 {
+                  localFile {
+                    childImageSharp {
+                      gatsbyImageData(placeholder: BLURRED)
+                    }
+                  }
+                  altText
+                }
+            }
         }
     }
-  }
-`
+
+}`
 
 export default DogPage
