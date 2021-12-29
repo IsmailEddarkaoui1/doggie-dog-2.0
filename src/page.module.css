@@ -66,3 +66,23 @@
   margin-top: 180px;
   text-align: center;
 }
+
+
+.hero {
+  width: 120vw;
+  height: 500px;
+  transform: translateX(calc((-120vw + 1080px) / 2));
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.description {
+  max-width: 600px;
+  margin: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .hero {
+    transform: translateX(-5%);
+  }
+}
