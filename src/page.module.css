@@ -23,10 +23,14 @@
 .header-title {
   font-size: 6rem;
   line-height: 5rem;
-  letter-spacing: -0.2rem;
+  letter-spacing: 10px;
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 30px;
+
+}
+.headerDescription{
+  white-space: pre-line;
 }
 
 .CTA {
@@ -50,12 +54,15 @@
 .subtitle {
   font-size: 4rem;
   line-height: 3rem;
-  letter-spacing: -0.2rem;
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 30px;
+  word-spacing: 10px;
 }
-.artists {
+.subtitleText{
+  white-space:pre-line;
+}
+.dogs {
   display: flex;
   justify-content: space-between;
   margin-top: 90px;
@@ -88,14 +95,14 @@
 }
 
 
-.artist-name {
+.dog-name {
   font-size: 2rem;
   text-transform: uppercase;
   color: #37ba83;
   margin: 0;
 }
 
-.artist-roles {
+.dog-roles {
   font-size: 1.3rem;
   text-transform: uppercase;
   margin: 0.5rem 0 1rem 0;
@@ -107,25 +114,25 @@
   margin: 1rem 0 1.5rem 0;
 }
 
-.artist-description {
+.dog-description {
   margin-bottom: 2rem;
 }
 
-.artist-info {
+.dog-info {
   font-weight: 700;
   text-transform: uppercase;
   color: #37ba83;
 }
 
-.artist-pictures {
+.dog-pictures {
   position: relative;
   display: flex;
   justify-content: space-between;
   margin-top: 120px;
 }
 
-.artist-pictures::before,
-.artist-pictures::after {
+.dog-pictures::before,
+.dog-pictures::after {
   position: absolute;
   display: inline-flex;
   content: "";
@@ -135,7 +142,7 @@
   transform: rotate(90);
 }
 
-.artist-pictures::before {
+.dog-pictures::before {
   top: -10%;
   left: 0%;
   background-size: 450px 450px;
@@ -144,7 +151,7 @@
 }
 
 
-.artist-picture {
+.dog-picture {
   border-radius: 50%;
   width: 28vw;
   height: 50vw;
@@ -166,4 +173,51 @@
   width: 50%;
   max-width: 500px;
   margin-left: 30px;
+}
+
+.company-info {
+  margin-top: 100px;
+  display: flex;
+  flex-direction:column;  
+  justify-content: center;
+  width: 50%;
+
+}
+
+.company-info p,
+.link {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.link {
+  color: #37ba83;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.instagram,
+.facebook {
+  background-size: 30px 30px;
+  height: 30px;
+  width: 30px;
+  margin-left: 1rem;
+  transition: transform 0.3 ease;
+}
+
+.instagram:hover,
+.facebook:hover {
+  transform: scale(1.1);
+}
+
+.instagram {
+  background-image: url("./images/instagram.svg");
+}
+
+.facebook {
+  background-image: url("./images/facebook.svg");
 }

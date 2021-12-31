@@ -6,12 +6,12 @@ import {
     header,
     headerInfo,
     headerPicture,
-    artistName,
-    artistRoles,
-    artistDescription,
-    artistInfo,
-    artistPictures,
-    artistPicture
+    dogName,
+    dogRoles,
+    dogDescription,
+    dogInfo,
+    dogPictures,
+    dogPicture
 } from "../../page.module.css"
 
 const DogPage = ({
@@ -35,12 +35,12 @@ const DogPage = ({
             <div className={header}>
                 <div className={headerInfo}>
                     {
-                    dog.name && <h3 className={artistName}>
+                    dog.name && <h3 className={dogName}>
                         {
                         dog.name
                     }</h3>
                 }
-                    <div className={artistRoles}>
+                    <div className={dogRoles}>
                         {
                         terms.map((term, i) => (
                             <span key={i}>
@@ -53,47 +53,47 @@ const DogPage = ({
                         ))
                     } </div>
 
-                    <div className={artistDescription}
+                    <div className={dogDescription}
                         dangerouslySetInnerHTML={
                             {__html: dog.description}
                         }/>
-                    <p className={artistInfo}>
+                    <p className={dogInfo}>
                         <span>Name:
                         </span>
                         {
                         dog.name
                     }</p>
-                    <p className={artistInfo}>
+                    <p className={dogInfo}>
                         <span>Age:
                         </span>
                         {
                         dog.age
                     }</p>
-                    <p className={artistInfo}>
+                    <p className={dogInfo}>
                         <span>Sex:
                         </span>
                         {
                         dog.sex
                     }</p>
-                    <p className={artistInfo}>
+                    <p className={dogInfo}>
                         <span>Price:
                         </span>
                         {
                         dog.price
                     }</p>
-                    <p className={artistInfo}>
+                    <p className={dogInfo}>
                         <span>Wormed:
                         </span>
                         {
                         dog.wormed
                     }</p>
-                    <p className={artistInfo}>
+                    <p className={dogInfo}>
                         <span>Sterilized:
                         </span>
                         {
                         dog.sterilized
                     }</p>
-                    <p className={artistInfo}>
+                    <p className={dogInfo}>
                         <span>ChieldFriendly:
                         </span>
                         {
@@ -108,18 +108,18 @@ const DogPage = ({
                     }/>
 
             </div>
-            <div className={artistPictures}>
-                <GatsbyImage className={artistPicture}
+            <div className={dogPictures}>
+                <GatsbyImage className={dogPicture}
                     image={picture1}
                     alt={
                         dog.images.picture1.altText
                     }/>
-                <GatsbyImage className={artistPicture}
+                <GatsbyImage className={dogPicture}
                     image={picture2}
                     alt={
                         dog.images.picture2.altText
                     }/>
-                <GatsbyImage className={artistPicture}
+                <GatsbyImage className={dogPicture}
                     image={picture3}
                     alt={
                         dog.images.picture3.altText

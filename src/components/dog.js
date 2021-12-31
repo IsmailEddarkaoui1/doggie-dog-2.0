@@ -1,7 +1,7 @@
 import React from "react"
 import {Link} from "gatsby"
 import {GatsbyImage, getImage} from "gatsby-plugin-image"
-import {wrapper, image, artistInfo, artistName} from "./dog.module.css"
+import {wrapper, image, dogInfo, dogName} from "./dog.module.css"
 
 
 export const Dog = ({dog, slug}) => {
@@ -14,9 +14,9 @@ export const Dog = ({dog, slug}) => {
                 alt={
                     dog.dogFields.images.picture1.altText
                 }/>
-            <div className={artistInfo}>
+            <div className={dogInfo}>
                 {
-                dog.dogFields.name && <p className={artistName}>
+                dog.dogFields.name && <p className={dogName}>
                     {
                     dog.dogFields.name
                 }</p>

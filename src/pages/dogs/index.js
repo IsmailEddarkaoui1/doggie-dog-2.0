@@ -7,7 +7,7 @@ import {
     hero,
     section,
     subtitle,
-    artists,
+    dogs,
     description
 } from "../../page.module.css"
 
@@ -40,7 +40,7 @@ const DogsPage = ({
                     dangerouslySetInnerHTML={
                         {__html: dogsPageFields.headerDogs.description}
                     }/>
-                <div className={artists}>
+                <div className={dogs}>
                     {
                     dogsInfo.map(({node: dog}) => (
                         <Dog key={

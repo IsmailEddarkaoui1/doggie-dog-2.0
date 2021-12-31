@@ -8,10 +8,11 @@ import {
     headerInfo,
     headerPicture,
     headerTitle,
+    headerDescription,
     CTA,
     subtitle,
     section,
-    artists
+    dogs
 } from "../page.module.css"
 
 const IndexPage = ({
@@ -31,9 +32,10 @@ const IndexPage = ({
                         {
                         homePageFields.headerHome.title
                     }</h1>
-                    <div dangerouslySetInnerHTML={
-                        {__html: homePageFields.headerHome.description}
-                    }/>
+                    <div className={headerDescription}
+                        dangerouslySetInnerHTML={
+                            {__html: homePageFields.headerHome.description}
+                        }/>
                     <a className={CTA}
                         target="__blank"
                         href={
@@ -59,7 +61,7 @@ const IndexPage = ({
                 <p>{
                     homePageFields.featuredDogs.description
                 }</p>
-                <div className={artists}>
+                <div className={dogs}>
                     {
                     homePageFields.featuredDogs.dogs.map(dog => (
                         <Dog slug={

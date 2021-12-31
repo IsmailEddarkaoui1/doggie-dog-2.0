@@ -15,7 +15,7 @@
   height: 100%;
 }
 
-.artist-info {
+.dog-info {
   display: block;
   position: absolute;
   bottom: -50px;
@@ -29,13 +29,13 @@
   transition: all 0.5s ease;
 }
 
-.wrapper:hover .artist-info {
+.wrapper:hover .dog-info {
   bottom: 0;
   opacity: 1;
 }
 
-.artist-name {
+.dog-name {
   margin: 0;
-  color: #37ba83;
+  color: #a3791f;
 }
 
